@@ -55,7 +55,6 @@ public class StartView extends AppCompatActivity {
     public void setSummaryView() {
         Intent intent = new Intent(this, SummaryView.class);
         startActivity(intent);
-
     }
 }
 

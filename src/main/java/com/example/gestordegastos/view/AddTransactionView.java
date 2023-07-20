@@ -39,7 +39,7 @@ public class AddTransactionView extends AppCompatActivity {
             if (view.getId() == R.id.bttnAddTransactionActAddTrans) {
                 presenter.saveTransaction();
             } else if(view.getId() == R.id.bttnCancelActAddTrans) {
-                setSummaryView();
+                finish();
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());
             }
@@ -49,5 +49,7 @@ public class AddTransactionView extends AppCompatActivity {
     public void setSummaryView() {
         Intent intent = new Intent(getApplicationContext(),SummaryView.class);
         startActivity(intent);
+
+        finish();
     }
 }

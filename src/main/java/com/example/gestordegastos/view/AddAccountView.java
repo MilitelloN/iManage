@@ -38,20 +38,18 @@ public class AddAccountView extends AppCompatActivity {
             if (view.getId() == R.id.bttnAddAccountActAddAcc) {
                 presenter.saveNewAccount(); // I must send all data entered in the view, created in sql and update the list of accounts.
             } else if(view.getId() == R.id.bttnCancelActAddAcc) {
-                setStartView();
+                finish();
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());
             }
         }
     };
 
-    private void setStartView() {
-        Intent intent = new Intent(getApplicationContext(),StartView.class);
-        startActivity(intent);
-    }
 
     public void setSummaryView() {
         Intent intent = new Intent(getApplicationContext(),SummaryView.class);
         startActivity(intent);
+
+        finish();
     }
 }
