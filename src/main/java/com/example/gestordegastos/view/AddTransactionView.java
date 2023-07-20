@@ -5,17 +5,16 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordegastos.R;
-import com.example.gestordegastos.presenter.SummaryPresenter;
 
-public class AddDebitTransView extends AppCompatActivity {
+public class AddTransactionView extends AppCompatActivity {
 
-    public AddDebitTransView() {
+    public AddTransactionView() {
 //        this.presenter = new SummaryPresenter(this);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.addtrans_debit_activity);
+        setContentView(R.layout.addtransaction_activity);
     }
 }

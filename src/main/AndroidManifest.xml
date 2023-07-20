@@ -28,7 +28,7 @@
 
         <activity android:name=".view.AddDebitAccountView" android:exported="false" />
 
-        <activity android:name=".view.AddDebitTransView" android:exported="false" />
+        <activity android:name=".view.AddTransactionView" android:exported="false" />
     </application>
 
 </manifest>

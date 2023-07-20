@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EEEDED">
 
     <TextView
         android:id="@+id/textView"
@@ -21,7 +22,7 @@
     <Spinner
         android:id="@+id/spnnr_account"
         android:layout_width="295dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="49dp"
         app:layout_constraintBottom_toTopOf="@+id/bttn_summary"

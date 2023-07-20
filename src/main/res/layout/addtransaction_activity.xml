@@ -159,7 +159,7 @@
         android:layout_marginTop="252dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
-        android:hint="Monto"
+        android:hint="Cuotas"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnnr_account_trans" />
