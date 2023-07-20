@@ -25,8 +25,10 @@ public class SummaryView extends AppCompatActivity {
         setContentView(R.layout.summary_activity);
 
         FloatingActionButton bttnAddTransaction = findViewById(R.id.bttn_addTrans);
+        FloatingActionButton bttnDownload = findViewById(R.id.bttn_download);
 
         bttnAddTransaction.setOnClickListener(bttnListener);
+        bttnDownload.setOnClickListener(bttnListener);
     }
 
     private View.OnClickListener bttnListener = new View.OnClickListener() {
@@ -35,7 +37,8 @@ public class SummaryView extends AppCompatActivity {
         public void onClick(View view) {
             if (view.getId() == R.id.bttn_addTrans) {
                 setAddTransactionActivity();
-//                Toast.makeText(SummaryView.this, "Boton", Toast.LENGTH_SHORT).show();
+            } else if(view.getId() == R.id.bttn_download) {
+                presenter.downloadCurrentSummary(); // This should send as parameter the filter selected and the context.
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());
             }

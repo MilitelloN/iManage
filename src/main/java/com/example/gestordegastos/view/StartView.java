@@ -26,8 +26,10 @@ public class StartView extends AppCompatActivity {
         setContentView(R.layout.start_activity);
 
         Button bttnSummary = findViewById(R.id.bttn_summary);
+        Button bttnCreateAcc = findViewById(R.id.bttn_createAcc);
 
         bttnSummary.setOnClickListener(bttnListener);
+        bttnCreateAcc.setOnClickListener(bttnListener);
     }
 
 
@@ -37,17 +39,23 @@ public class StartView extends AppCompatActivity {
         public void onClick(View view) {
             if (view.getId() == R.id.bttn_summary) {
                 startPresenter.setSummaryView(getApplicationContext());
+            } else if (view.getId() == R.id.bttn_createAcc) {
+              setCreateAccountView();
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());
             }
         }
     };
 
+    private void setCreateAccountView() {
+        Intent intent = new Intent(this, AddAccountView.class);
+        startActivity(intent);
+    }
+
     public void setSummaryView() {
         Intent intent = new Intent(this, SummaryView.class);
         startActivity(intent);
 
-        //finish();
     }
 }
 

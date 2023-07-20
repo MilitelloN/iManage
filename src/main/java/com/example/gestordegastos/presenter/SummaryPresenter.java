@@ -16,4 +16,7 @@ public class SummaryPresenter {
         this.model = new SummaryModel(this);
     }
 
+    public void downloadCurrentSummary() {
+        this.model.generateSummary();
+    }
 }

@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_desc2" />
 
     <Button
-        android:id="@+id/bttn_AddAccount"
+        android:id="@+id/bttnAddAccount"
         android:layout_width="131dp"
         android:layout_height="74dp"
         android:layout_marginEnd="57dp"

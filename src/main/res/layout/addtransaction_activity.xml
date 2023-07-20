@@ -51,12 +51,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <Button
-        android:id="@+id/bttn_AddAccount3"
+        android:id="@+id/bttn_AddTransaction"
         android:layout_width="167dp"
         android:layout_height="97dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="39dp"
-        android:text="Agregar cuenta"
+        android:text="Agregar transaccion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -99,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
 
     <Button
-        android:id="@+id/bttn_cancel3"
+        android:id="@+id/bttn_cancel"
         android:layout_width="114dp"
         android:layout_height="76dp"
         android:layout_marginEnd="52dp"
