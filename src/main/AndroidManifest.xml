@@ -24,9 +24,7 @@
 
         <activity android:name=".view.SummaryView" android:exported="false" />
 
-        <activity android:name=".view.AddCreditAccountView" android:exported="false"/>
-
-        <activity android:name=".view.AddDebitAccountView" android:exported="false" />
+        <activity android:name=".view.AddAccountView" android:exported="false"/>
 
         <activity android:name=".view.AddTransactionView" android:exported="false" />
     </application>
