@@ -7,20 +7,20 @@ import com.example.gestordegastos.view.StartView;
 
 public class StartPresenter {
 
-    private final StartView startView;
-    private final StartModel startModel;
+    private final StartView view;
+    private final StartModel model;
 
 
     public StartPresenter(StartView startView) {
-        this.startView = startView;
-        this.startModel = new StartModel(this);
+        this.view = startView;
+        this.model = new StartModel(this);
     }
 
     public void setSummaryView(Context ctx) {
-        startModel.setSummaryView(ctx);
+        model.setSummaryView(ctx);
     }
 
     public void accountsFound() {
-        startView.setSummaryView();
+        view.setSummaryView();
     }
 }

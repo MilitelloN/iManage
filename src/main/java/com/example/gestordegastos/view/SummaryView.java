@@ -24,8 +24,8 @@ public class SummaryView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.summary_activity);
 
-        FloatingActionButton bttnAddTransaction = findViewById(R.id.bttn_addTrans);
-        FloatingActionButton bttnDownload = findViewById(R.id.bttn_download);
+        FloatingActionButton bttnAddTransaction = findViewById(R.id.bttnAddTransactionActSummary);
+        FloatingActionButton bttnDownload = findViewById(R.id.bttnDownloadActSummary);
 
         bttnAddTransaction.setOnClickListener(bttnListener);
         bttnDownload.setOnClickListener(bttnListener);
@@ -35,9 +35,9 @@ public class SummaryView extends AppCompatActivity {
         @SuppressLint("NonConstantResourceId")
         @Override
         public void onClick(View view) {
-            if (view.getId() == R.id.bttn_addTrans) {
+            if (view.getId() == R.id.bttnAddTransactionActSummary) {
                 setAddTransactionActivity();
-            } else if(view.getId() == R.id.bttn_download) {
+            } else if(view.getId() == R.id.bttnDownloadActSummary) {
                 presenter.downloadCurrentSummary(); // This should send as parameter the filter selected and the context.
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());

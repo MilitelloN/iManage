@@ -13,37 +13,37 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="7dp"
         android:text="iManage"
-        app:layout_constraintBottom_toTopOf="@+id/spnnr_account"
+        app:layout_constraintBottom_toTopOf="@+id/spnnrAccActStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spnnr_account"
+        android:id="@+id/spnnrAccActStart"
         android:layout_width="295dp"
         android:layout_height="48dp"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="49dp"
-        app:layout_constraintBottom_toTopOf="@+id/bttn_summary"
+        app:layout_constraintBottom_toTopOf="@+id/bttnSummaryActStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/bttn_summary"
+        android:id="@+id/bttnSummaryActStart"
         android:layout_width="150dp"
         android:layout_height="96dp"
         android:layout_marginBottom="26dp"
         android:text="Ver resumen"
-        app:layout_constraintBottom_toTopOf="@+id/rGroup_Filter"
+        app:layout_constraintBottom_toTopOf="@+id/rGrpFilterStartAct"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/bttn_createAcc"
+        android:id="@+id/bttnCreateAccActStart"
         android:layout_width="150dp"
         android:layout_height="96dp"
         android:layout_marginTop="38dp"
@@ -53,11 +53,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rGroup_Filter"
+        app:layout_constraintTop_toBottomOf="@+id/rGrpFilterStartAct"
         tools:ignore="MissingConstraints" />
 
     <RadioGroup
-        android:id="@+id/rGroup_Filter"
+        android:id="@+id/rGrpFilterStartAct"
         android:layout_width="403dp"
         android:layout_height="88dp"
         android:layout_marginTop="26dp"
@@ -65,10 +65,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bttn_summary">
+        app:layout_constraintTop_toBottomOf="@+id/bttnSummaryActStart">
 
         <RadioButton
-            android:id="@+id/rBttn_day"
+            android:id="@+id/rBttnDayActSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dia" />

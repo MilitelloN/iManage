@@ -5,17 +5,17 @@ import com.example.gestordegastos.view.AddTransactionView;
 
 public class AddTransactionPresenter {
 
-    AddTransactionView view;
-    AddTransactionModel model;
+    private final AddTransactionView view;
+    private final AddTransactionModel model;
 
-    public AddTransactionPresenter(AddTransactionView view) {
-        this.view = view;
+    public AddTransactionPresenter(AddTransactionView addTransactionView) {
+        this.view = addTransactionView;
         this.model = new AddTransactionModel(this);
     }
 
 
     public void saveTransaction() {
-        this.model.saveTransaction();
+        model.saveTransaction();
     }
 
     public void onTransactionSaved() {

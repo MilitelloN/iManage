@@ -14,10 +14,10 @@ import com.example.gestordegastos.R;
 import com.example.gestordegastos.presenter.StartPresenter;
 
 public class StartView extends AppCompatActivity {
-    private final StartPresenter startPresenter;
+    private final StartPresenter presenter;
 
     public StartView() {
-        this.startPresenter = new StartPresenter(this);
+        this.presenter = new StartPresenter(this);
     }
 
     @Override
@@ -25,8 +25,8 @@ public class StartView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_activity);
 
-        Button bttnSummary = findViewById(R.id.bttn_summary);
-        Button bttnCreateAcc = findViewById(R.id.bttn_createAcc);
+        Button bttnSummary = findViewById(R.id.bttnSummaryActStart);
+        Button bttnCreateAcc = findViewById(R.id.bttnCreateAccActStart);
 
         bttnSummary.setOnClickListener(bttnListener);
         bttnCreateAcc.setOnClickListener(bttnListener);
@@ -37,9 +37,9 @@ public class StartView extends AppCompatActivity {
         @SuppressLint("NonConstantResourceId")
         @Override
         public void onClick(View view) {
-            if (view.getId() == R.id.bttn_summary) {
-                startPresenter.setSummaryView(getApplicationContext());
-            } else if (view.getId() == R.id.bttn_createAcc) {
+            if (view.getId() == R.id.bttnSummaryActStart) {
+                presenter.setSummaryView(getApplicationContext());
+            } else if (view.getId() == R.id.bttnCreateAccActStart) {
               setCreateAccountView();
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());

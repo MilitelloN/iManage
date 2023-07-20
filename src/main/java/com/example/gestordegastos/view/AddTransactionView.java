@@ -13,7 +13,7 @@ import com.example.gestordegastos.presenter.AddTransactionPresenter;
 
 public class AddTransactionView extends AppCompatActivity {
 
-    AddTransactionPresenter presenter;
+    private final AddTransactionPresenter presenter;
 
     public AddTransactionView() {
         this.presenter = new AddTransactionPresenter(this);
@@ -24,8 +24,8 @@ public class AddTransactionView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addtransaction_activity);
 
-        Button bttnAddTransaction = findViewById(R.id.bttn_AddTransaction);
-        Button bttnCancel = findViewById(R.id.bttn_cancel);
+        Button bttnAddTransaction = findViewById(R.id.bttnAddTransactionActAddTrans);
+        Button bttnCancel = findViewById(R.id.bttnCancelActAddTrans);
 
         bttnAddTransaction.setOnClickListener(bttnListener);
         bttnCancel.setOnClickListener(bttnListener);
@@ -36,9 +36,9 @@ public class AddTransactionView extends AppCompatActivity {
         @SuppressLint("NonConstantResourceId")
         @Override
         public void onClick(View view) {
-            if (view.getId() == R.id.bttn_AddTransaction) {
+            if (view.getId() == R.id.bttnAddTransactionActAddTrans) {
                 presenter.saveTransaction();
-            } else if(view.getId() == R.id.bttn_cancel) {
+            } else if(view.getId() == R.id.bttnCancelActAddTrans) {
                 setSummaryView();
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());

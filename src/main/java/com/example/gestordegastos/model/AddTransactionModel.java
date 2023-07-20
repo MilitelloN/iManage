@@ -6,7 +6,7 @@ import com.example.gestordegastos.presenter.AddTransactionPresenter;
 
 public class AddTransactionModel {
 
-    AddTransactionPresenter presenter;
+    private final AddTransactionPresenter presenter;
 
     public AddTransactionModel(AddTransactionPresenter addTransactionPresenter) {
         this.presenter = addTransactionPresenter;

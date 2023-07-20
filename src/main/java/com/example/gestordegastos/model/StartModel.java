@@ -6,10 +6,10 @@ import com.example.gestordegastos.presenter.StartPresenter;
 
 public class StartModel {
 
-    private final StartPresenter startPresenter;
+    private final StartPresenter presenter;
 
     public StartModel(StartPresenter startPresenter) {
-        this.startPresenter = startPresenter;
+        this.presenter = startPresenter;
     }
 
     public void setSummaryView(Context ctx) {
@@ -21,6 +21,6 @@ public class StartModel {
         *       sendTo(summaryView_lastAccount);
         *
         * */
-        startPresenter.accountsFound();
+        presenter.accountsFound();
     }
 }

@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txt_nameAcc2"
+        android:id="@+id/txtNameAccActAddAcc"
         android:layout_width="365dp"
         android:layout_height="53dp"
         android:layout_marginTop="38dp"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/txt_desc2"
+        android:id="@+id/txtDescActAddAcc"
         android:layout_width="371dp"
         android:layout_height="68dp"
         android:layout_marginTop="26dp"
@@ -37,10 +37,10 @@
         android:inputType="text"
         android:text="Descripcion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nameAcc2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNameAccActAddAcc" />
 
     <Switch
-        android:id="@+id/sw_accType2"
+        android:id="@+id/swAccTypeActAddAcc"
         android:layout_width="62dp"
         android:layout_height="60dp"
         android:layout_marginTop="11dp"
@@ -48,12 +48,12 @@
         android:layout_marginBottom="14dp"
         android:textOff="Cuenta debito"
         android:textOn="Cuenta credito"
-        app:layout_constraintBottom_toTopOf="@+id/txt_PrevDate"
+        app:layout_constraintBottom_toTopOf="@+id/txtPrevDateActAddAcc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_desc2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDescActAddAcc" />
 
     <Button
-        android:id="@+id/bttnAddAccount"
+        android:id="@+id/bttnAddAccountActAddAcc"
         android:layout_width="131dp"
         android:layout_height="74dp"
         android:layout_marginEnd="57dp"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/bttn_cancel"
+        android:id="@+id/bttnCancelActAddAcc"
         android:layout_width="117dp"
         android:layout_height="57dp"
         android:layout_marginStart="61dp"
@@ -73,7 +73,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/txt_PrevDate"
+        android:id="@+id/txtPrevDateActAddAcc"
         android:layout_width="365dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
@@ -82,12 +82,12 @@
         android:ems="10"
         android:hint="Fecha de cierre anterior"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/txt_CurrDate"
+        app:layout_constraintBottom_toTopOf="@+id/txtCurrDateActAddAcc"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sw_accType2" />
+        app:layout_constraintTop_toBottomOf="@+id/swAccTypeActAddAcc" />
 
     <EditText
-        android:id="@+id/txt_CurrDate"
+        android:id="@+id/txtCurrDateActAddAcc"
         android:layout_width="363dp"
         android:layout_height="48dp"
         android:layout_marginStart="27dp"
@@ -96,10 +96,10 @@
         android:hint="Fecha de cierre actual"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_PrevDate" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPrevDateActAddAcc" />
 
     <EditText
-        android:id="@+id/txt_NextDate"
+        android:id="@+id/txtNextDateActAddAcc"
         android:layout_width="368dp"
         android:layout_height="48dp"
         android:layout_marginStart="27dp"
@@ -108,5 +108,5 @@
         android:hint="Fecha de cierre siguiente"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_CurrDate" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrDateActAddAcc" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,61 +16,61 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spnnr_account"
+        android:id="@+id/spnnrAccActSummary"
         android:layout_width="364dp"
         android:layout_height="80dp"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/rGroup_Filter"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/rGrpFilterActSummary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.5" />
 
     <RadioGroup
-        android:id="@+id/rGroup_Filter"
+        android:id="@+id/rGrpFilterActSummary"
         android:layout_width="403dp"
         android:layout_height="88dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="40dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnnr_account">
+        app:layout_constraintTop_toBottomOf="@+id/spnnrAccActSummary">
 
         <RadioButton
-            android:id="@+id/rBttn_day"
+            android:id="@+id/rBttnDayActSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="Dia" />
 
         <RadioButton
-            android:id="@+id/rBttn_week"
+            android:id="@+id/rBttnWeekActSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Semana" />
 
         <RadioButton
-            android:id="@+id/rBttn_month"
+            android:id="@+id/rBttnMonthActSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mes" />
 
         <RadioButton
-            android:id="@+id/rBttn_year"
+            android:id="@+id/rBttnYearActSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ano" />
 
         <RadioButton
-            android:id="@+id/rBttn_period"
+            android:id="@+id/rBttnPeriodActSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Periodo" />
 
         <RadioButton
-            android:id="@+id/rBttn_close"
+            android:id="@+id/rBttnCloseToCloseActSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -79,32 +79,32 @@
     </RadioGroup>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bttn_addTrans"
+        android:id="@+id/bttnAddTransactionActSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="56dp"
         android:clickable="true"
         android:contentDescription="Add new transaction"
         android:focusable="auto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rGroup_Filter"
+        app:layout_constraintTop_toBottomOf="@+id/rGrpFilterActSummary"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bttn_download"
+        android:id="@+id/bttnDownloadActSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="92dp"
         android:clickable="true"
         android:contentDescription="Download summary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rGroup_Filter"
+        app:layout_constraintTop_toBottomOf="@+id/rGrpFilterActSummary"
         app:srcCompat="@android:drawable/stat_sys_download_done" />
 
     <ListView
-        android:id="@+id/list_trans"
+        android:id="@+id/listTransactionsActSummary"
         android:layout_width="390dp"
         android:layout_height="282dp"
         android:layout_marginTop="11dp"
@@ -112,6 +112,6 @@
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bttn_addTrans" />
+        app:layout_constraintTop_toBottomOf="@+id/bttnAddTransactionActSummary" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

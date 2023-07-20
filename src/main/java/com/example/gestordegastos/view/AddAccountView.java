@@ -14,7 +14,6 @@ import com.example.gestordegastos.presenter.AddAccountPresenter;
 public class AddAccountView extends AppCompatActivity {
     private final AddAccountPresenter presenter;
 
-
     public AddAccountView(){
         this.presenter = new AddAccountPresenter(this);
     }
@@ -24,8 +23,8 @@ public class AddAccountView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addaccount_activity);
 
-        Button bttnCreateAccount = findViewById(R.id.bttnAddAccount);
-        Button bttnCancel = findViewById(R.id.bttn_cancel);
+        Button bttnCreateAccount = findViewById(R.id.bttnAddAccountActAddAcc);
+        Button bttnCancel = findViewById(R.id.bttnCancelActAddAcc);
 
         bttnCreateAccount.setOnClickListener(bttnListener);
         bttnCancel.setOnClickListener(bttnListener);
@@ -36,9 +35,9 @@ public class AddAccountView extends AppCompatActivity {
         @SuppressLint("NonConstantResourceId")
         @Override
         public void onClick(View view) {
-            if (view.getId() == R.id.bttnAddAccount) {
+            if (view.getId() == R.id.bttnAddAccountActAddAcc) {
                 presenter.saveNewAccount(); // I must send all data entered in the view, created in sql and update the list of accounts.
-            } else if(view.getId() == R.id.bttn_cancel) {
+            } else if(view.getId() == R.id.bttnCancelActAddAcc) {
                 setStartView();
             } else {
                 throw new IllegalStateException("Unexpected value: " + view.getId());
