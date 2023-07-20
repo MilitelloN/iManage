@@ -76,12 +76,15 @@
         android:id="@+id/sw_accType"
         android:layout_width="65dp"
         android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="13dp"
         android:textOff="Ingreso"
         android:textOn="Debitro"
+        app:layout_constraintBottom_toTopOf="@+id/txt_quota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="269dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_desc" />
 
     <EditText
         android:id="@+id/txt_desc"
@@ -110,9 +113,12 @@
         android:layout_width="286dp"
         android:layout_height="57dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="105dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="413dp">
+        app:layout_constraintTop_toBottomOf="@+id/txt_quota">
 
         <RadioButton
             android:id="@+id/rBttn_today"
