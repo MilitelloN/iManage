@@ -5,14 +5,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordegastos.R;
+import com.example.gestordegastos.database.DatabaseBuilder;
+import com.example.gestordegastos.database.entities.Account;
 import com.example.gestordegastos.presenter.AddAccountPresenter;
+
+import java.util.List;
 
 public class AddAccountView extends AppCompatActivity {
     private final AddAccountPresenter presenter;
+
+
+        private EditText accountName;
+        private EditText accountDesc;
+        private Switch accountType;
+        private EditText prevDate;
+        private EditText currDate;
+        private EditText nextDate;
+
 
     public AddAccountView(){
         this.presenter = new AddAccountPresenter(this);
@@ -29,6 +45,13 @@ public class AddAccountView extends AppCompatActivity {
         bttnCreateAccount.setOnClickListener(bttnListener);
         bttnCancel.setOnClickListener(bttnListener);
 
+        // Form fields:
+        this.accountName = findViewById(R.id.txtNameAccActAddAcc);
+        this.accountDesc = findViewById(R.id.txtDescActAddAcc);
+        this.accountType = findViewById(R.id.swAccTypeActAddAcc);
+        this.prevDate = findViewById(R.id.txtPrevDateActAddAcc);
+        this.currDate = findViewById(R.id.txtCurrDateActAddAcc);
+        this.nextDate = findViewById(R.id.txtNextDateActAddAcc);
     }
 
     private View.OnClickListener bttnListener = new View.OnClickListener() {
@@ -36,7 +59,7 @@ public class AddAccountView extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (view.getId() == R.id.bttnAddAccountActAddAcc) {
-                presenter.saveNewAccount(); // I must send all data entered in the view, created in sql and update the list of accounts.
+                presenter.saveNewAccount(getApplicationContext(), accountName.getText().toString(), accountDesc.getText().toString(), accountType.isChecked(), prevDate.getText().toString(),currDate.getText().toString(),nextDate.getText().toString());
             } else if(view.getId() == R.id.bttnCancelActAddAcc) {
                 finish();
             } else {
@@ -47,9 +70,15 @@ public class AddAccountView extends AppCompatActivity {
 
 
     public void setSummaryView() {
-        Intent intent = new Intent(getApplicationContext(),SummaryView.class);
-        startActivity(intent);
+        List<Account> acc = DatabaseBuilder.getBD(getApplicationContext()).daoAccount().getAllAccounts();
 
-        finish();
+        for (Account a : acc) {
+            Toast.makeText(this,a.toString(), Toast.LENGTH_LONG).show();
+        }
+
+//        Intent intent = new Intent(getApplicationContext(),SummaryView.class);
+//        startActivity(intent);
+//
+//        finish();
     }
 }

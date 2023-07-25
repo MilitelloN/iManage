@@ -1,10 +1,10 @@
-package com.example.gestordegastos.databaseBuilder.dao;
+package com.example.gestordegastos.database.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.gestordegastos.databaseBuilder.entities.Transaction;
+import com.example.gestordegastos.database.entities.Transaction;
 
 import java.util.List;
 

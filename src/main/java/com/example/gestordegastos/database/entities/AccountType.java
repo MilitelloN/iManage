@@ -1,18 +1,15 @@
-package com.example.gestordegastos.databaseBuilder.entities;
+package com.example.gestordegastos.database.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class CategoryType {
-    @PrimaryKey
-    @NonNull
-    private int id;
-    @NonNull
-    private String name;
+public class AccountType {
+    @PrimaryKey @NonNull private int id;
+    @NonNull private String name;
 
-    public CategoryType(int id, @NonNull String name) {
+    public AccountType(int id, @NonNull String name) {
         this.id = id;
         this.name = name;
     }
@@ -36,7 +33,7 @@ public class CategoryType {
 
     @Override
     public String toString() {
-        return "CategoryType{" +
+        return "AccountType{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

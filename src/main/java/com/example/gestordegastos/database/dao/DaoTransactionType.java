@@ -1,10 +1,10 @@
-package com.example.gestordegastos.databaseBuilder.dao;
+package com.example.gestordegastos.database.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.gestordegastos.databaseBuilder.entities.TransactionType;
+import com.example.gestordegastos.database.entities.TransactionType;
 
 import java.util.List;
 
@@ -15,4 +15,7 @@ public interface DaoTransactionType {
 
     @Query("SELECT * FROM `TransactionType`")
     List<TransactionType> getAllTransactionTypes();
+
+    @Query("SELECT EXISTS(SELECT * FROM `TransactionType`)")
+    boolean isCreated();
 }

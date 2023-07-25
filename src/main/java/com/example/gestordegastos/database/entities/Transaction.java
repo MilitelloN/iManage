@@ -1,12 +1,8 @@
-package com.example.gestordegastos.databaseBuilder.entities;
+package com.example.gestordegastos.database.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
-import com.example.gestordegastos.tools.DateConverter;
-
-import java.sql.Date;
 
 @Entity
 public class Transaction {

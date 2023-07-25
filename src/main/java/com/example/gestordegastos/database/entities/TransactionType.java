@@ -1,4 +1,4 @@
-package com.example.gestordegastos.databaseBuilder.entities;
+package com.example.gestordegastos.database.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;

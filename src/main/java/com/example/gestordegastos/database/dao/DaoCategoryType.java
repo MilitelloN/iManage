@@ -1,10 +1,10 @@
-package com.example.gestordegastos.databaseBuilder.dao;
+package com.example.gestordegastos.database.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.gestordegastos.databaseBuilder.entities.CategoryType;
+import com.example.gestordegastos.database.entities.CategoryType;
 
 import java.util.List;
 
@@ -15,4 +15,7 @@ public interface DaoCategoryType {
 
     @Query("SELECT * FROM `CategoryType`")
     List<CategoryType> getAllCategoryTypes();
+
+    @Query("SELECT EXISTS(SELECT * FROM `CategoryType`)")
+    boolean isCreated();
 }
